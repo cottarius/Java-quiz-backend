@@ -66,14 +66,4 @@ public class QuestionController {
             @RequestParam(defaultValue = "false") boolean searchInAnswers) {
         return questionService.searchQuestions(query, searchInAnswers);
     }
-
-    /**
-     * Отображает главную страницу приложения.
-     *
-     * @return имя представления главной страницы
-     */
-    @GetMapping(value = "/index")
-    public String mainPage() {
-        return "index";
-    }
 }
