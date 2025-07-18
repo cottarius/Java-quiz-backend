@@ -1,4 +1,9 @@
 spring:
+  security:
+    user:
+      name: admin@example.com  # Временный админ (можно удалить после настройки)
+      password: admin123
+      roles: ADMIN
   datasource:
     url: ${DB_URL}
     username: ${DB_USERNAME}
@@ -6,3 +11,8 @@ spring:
     driver-class-name: org.postgresql.Driver
   liquibase:
     enabled: true
+
+
+jwt:
+  secret: "+XTu1xFeVLLxmyC/oIeabsljz28rWnsmIFLBLhctiQw=" # Сгенерировать: openssl rand -base64 32
+  Ïexpiration-ms: 86400000 # 24 часа

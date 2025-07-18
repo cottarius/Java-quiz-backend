@@ -1,15 +1,15 @@
 package ru.cotarius.javaquiz.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import ru.cotarius.javaquiz.entity.Question;
 import ru.cotarius.javaquiz.service.QuestionService;
 
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")  // Разрешить запросы с React-приложени
 @RequiredArgsConstructor
 public class QuestionController {
 
