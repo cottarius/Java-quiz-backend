@@ -5,5 +5,3 @@ databaseChangeLog:
 
   - include:
       file: sql/create-table-question.sql
-  - include:
-      file: sql/create-table-users.sql

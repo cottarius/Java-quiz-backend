@@ -1,10 +1,16 @@
 databaseChangeLog:
   - include:
-      file: v.1.0.0/create-tables.yaml
+      file: v.1.0.0/create-table-users.yaml
       relativeToChangelogFile: true
   - include:
-      file: v.1.0.1/insert-questions.yaml
+      file: v.1.0.1/create-table-questions.yaml
       relativeToChangelogFile: true
   - include:
-      file: v.1.0.2/create-quiz-questions.yaml
+      file: v.1.0.2/insert-questions.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v.1.0.3/create-quiz-questions.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v.1.0.4/insert-quiz-questions.yaml
       relativeToChangelogFile: true
