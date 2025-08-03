@@ -5,3 +5,6 @@ databaseChangeLog:
   - include:
       file: v.1.0.1/insert-questions.yaml
       relativeToChangelogFile: true
+  - include:
+      file: v.1.0.2/create-quiz-questions.yaml
+      relativeToChangelogFile: true
