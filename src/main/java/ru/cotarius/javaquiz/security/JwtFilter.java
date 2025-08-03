@@ -35,6 +35,9 @@ public class JwtFilter extends OncePerRequestFilter {
 
         String authHeader = request.getHeader("Authorization");
 
+        // Для отладки - логируем запросы
+        System.out.println("JWT Filter: " + path + " - " + authHeader);
+
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String jwt = authHeader.substring(7);
             String username = jwtService.extractUsername(jwt);

@@ -17,10 +17,13 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(Arrays.asList(
                 "http://localhost:3000",
-                "https://javacoder.su"
+                "https://javacoder.su",
+                "http://localhost:5173", // Vite dev server
+                "http://localhost:8080"  // Spring Boot dev server
         ));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(Arrays.asList("*"));
+        config.setExposedHeaders(Arrays.asList("Authorization"));
         config.setAllowCredentials(true);
         config.setMaxAge(3600L); // Кэшировать preflight на 1 час
 

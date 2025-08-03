@@ -32,6 +32,7 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/auth/register").permitAll()
                         .requestMatchers(HttpMethod.GET, "/all/**").authenticated()
+                        .requestMatchers("/api/quiz/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

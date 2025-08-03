@@ -15,7 +15,7 @@ spring:
 
 jwt:
   secret: "+XTu1xFeVLLxmyC/oIeabsljz28rWnsmIFLBLhctiQw=" # Сгенерировать: openssl rand -base64 32
-  Ïexpiration-ms: 86400000 # 24 часа
+  expiration-ms: 86400000 # 24 часа
 
 telegram:
   token: ${TELEGRAM_TOKEN}

@@ -1,6 +1,7 @@
 package ru.cotarius.javaquiz.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.cotarius.javaquiz.entity.QuizQuestion;
@@ -9,6 +10,7 @@ import ru.cotarius.javaquiz.service.QuizService;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/quiz")
 @RequiredArgsConstructor
@@ -22,7 +24,9 @@ public class QuizController {
      */
     @GetMapping("/questions")
     public ResponseEntity<List<QuizQuestion>> getAllQuestions() {
+        log.info("Получен запрос на все вопросы викторины");
         List<QuizQuestion> questions = quizService.getAllQuestions();
+        log.info("Найдено {} вопросов", questions.size());
         return ResponseEntity.ok(questions);
     }
 
